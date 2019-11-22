@@ -10,6 +10,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     compileOptions {
@@ -23,4 +24,7 @@ dependencies {
     implementation "androidx.annotation:annotation:${rootProject.annotationVersion}"
     implementation "androidx.fragment:fragment:${rootProject.fragmentVersion}"
     implementation "androidx.appcompat:appcompat:${rootProject.appCompatVersion}"
+    androidTestImplementation "androidx.test:runner:$androidxTestRunnerVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxTestJunitVersion"
+    androidTestImplementation "androidx.test.uiautomator:uiautomator:$uiAutomatorVersion"
 }
