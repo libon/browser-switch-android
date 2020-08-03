@@ -2,6 +2,7 @@
 
 ## TBD
 * Added an instrumentation test for the demo application
+* Support custom tabs when Chrome isn't installed
 
 ## 1.0.0
 
