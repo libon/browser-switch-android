@@ -1,7 +1,9 @@
 # browser-switch-android Release Notes
 
-## 1.1.0
+## Version TBD
+* Support custom tabs when Chrome isn't installed
 
+## 1.1.0
 * Create `BrowserSwitchOptions` value object for configuring browser switch behavior
 * Add BrowserSwitchClient#start overloads with `BrowserSwitchOptions` param
 * Add BrowserSwitchFragment#browserSwitch overload with `BrowserSwitchOptions` param
