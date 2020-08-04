@@ -1,5 +1,8 @@
 # browser-switch-android Release Notes
 
+## TBD
+* Added an instrumentation test for the demo application
+
 ## 1.0.0
 
 * Create BrowserSwitchClient to allow browser switch behavior through composition as well as inheritance.
