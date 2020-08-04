@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="browser_switch_btn_text">Start Browser Switch</string>
+    <string name="browser_switch_uri_text">Uri: %s</string>
+    <string name="browser_switch_success_text">Browser Switch Successful</string>
+    <string name="browser_switch_error_text">Browser Switch Error: %s</string>
+    <string name="browser_switch_cancel_text">Browser Switch Cancelled by User</string>
 </resources>

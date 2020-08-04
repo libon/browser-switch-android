@@ -1,5 +1,6 @@
 package com.braintreepayments.browserswitch.demo;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 
@@ -44,11 +45,12 @@ public class DemoActivityTest {
     private void performBrowserSwitch(UiDevice device,
                                       String colorActionLabel,
                                       String expectedReturnUrl) throws UiObjectNotFoundException {
+        Application application = ApplicationProvider.getApplicationContext();
         device.findObject(By.res(BuildConfig.APPLICATION_ID, "browser_switch")).click();
         UiSelector selector = new UiSelector();
         device.findObject(selector.text(colorActionLabel)).click();
-        assertTrue(device.findObject(selector.text("Browser Switch Successful")).exists());
-        assertTrue(device.findObject(selector.text("Uri: " + expectedReturnUrl)).exists());
+        assertTrue(device.findObject(selector.text(application.getString(R.string.browser_switch_success_text))).exists());
+        assertTrue(device.findObject(selector.text(application.getString(R.string.browser_switch_uri_text, expectedReturnUrl))).exists());
     }
 
 }
