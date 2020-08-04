@@ -90,7 +90,7 @@ public class BrowserSwitchClientTest {
         sut = BrowserSwitchClient.newInstance(browserSwitchConfig, activityFinder, persistentStore, returnUrlScheme);
         sut.start(123, uri, fragmentListener, browserSwitchListener);
 
-        verify(applicationContext).startActivity(browserSwitchIntent);
+        verify(activity).startActivity(browserSwitchIntent);
 
         ArgumentCaptor<BrowserSwitchRequest> captor =
             ArgumentCaptor.forClass(BrowserSwitchRequest.class);

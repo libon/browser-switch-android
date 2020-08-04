@@ -3,6 +3,13 @@
 ## TBD
 * Added an instrumentation test for the demo application
 * Support custom tabs when Chrome isn't installed
+* Use the browser switch with custom tabs in the same activity task as `BraintreeBrowserSwitch`s activity
+* Breaking changes:
+  * The activity which launches the browser switch must now have `android:launchMode="singleTask"`. See the `DemoActivity` entry in the [AndroidManifest.xml](demo/src/main/AndroidManifest.xml) file in the demo application
+  * To ensure that the calling activity will receive the the browser switch result even if the OS kills the app process when the browser is open, you should indicate the activity on app startup. See [DemoApplication](demo/src/main/java/com/braintreepayments/browserswitch/demo/DemoApplication.java) in the demo application:
+    ```java
+    BrowserSwitchActivity.setReturnIntent(new Intent(this, DemoActivity.class))
+    ```
 
 ## 1.0.0
 
